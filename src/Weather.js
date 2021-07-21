@@ -11,13 +11,13 @@ export default function Weather(){
                     <input
                     type="search"
                     placeholder="Type a city.."
-                    class="form-control"
+                    className="form-control"
                     id="city-input"
-                    autofocus="on"
-                    autocomplete="off"
+                    autoFocus="on"
+                    autoComplete="off"
                     />
                 </div>
-                <div class="col-3">
+                <div className="col-3">
                     <input
                     type="submit"
                     value="Search"
@@ -54,14 +54,14 @@ export default function Weather(){
                 </div>
                 <div className="col-6">
                     <div className="weather-temperature justify-content-end">
-                    <img src="" alt="Clear" id="icon" class="float-right" />
+                    <img src="" alt="Clear" id="icon" className="float-right" />
                     <strong id="temperature"></strong>
                     <span className="units">
-                        <a href="#" id="celsius-link" className="active">
+                        <a href="www.google.com" id="celsius-link" className="active">
                         °C{" "}
                         </a>
                         |
-                        <a href="#" id="fahrenheit-link">
+                        <a href="www.google.com" id="fahrenheit-link">
                         °F
                         </a>
                     </span>
