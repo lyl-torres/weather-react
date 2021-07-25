@@ -9,10 +9,10 @@ function App() {
       </header>
       <small>
       <div className="App-footer">
-        <a href="https://github.com/lyl-torres/weather-react">
+        <a href="https://github.com/lyl-torres/weather-react" target="_blank">
         Open-source code
         </a>
-        , by Liliana.
+        , by Liliana Torres.
         </div>
    </small>
     </div>
