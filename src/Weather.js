@@ -30,7 +30,7 @@ export default function Weather(){
             <div className="overview">
                 <div className="row">
                 <div className="col-6">
-                    <h1 id="city">Mexico City</h1>
+                    <h1 id="city">Mykonos</h1>
                     <ul>
                     <li>
                         <span id="date"></span>
@@ -47,6 +47,12 @@ export default function Weather(){
                         Wind:{" "}
                         <strong>
                             <span id="wind"></span> km/h{" "}
+                        </strong>
+                        </li>
+                        <li>
+                        Precipitation:{" "}
+                        <strong>
+                            <span id="precipitation"></span> %{" "}
                         </strong>
                         </li>
                     </ul>
