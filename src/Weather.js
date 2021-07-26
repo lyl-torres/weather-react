@@ -1,23 +1,24 @@
 import React, {useState} from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 
-export default function Weather(){
-    const [ready, setReady] = useState(false)
-    const [weatherData, setweatherData] = useState({});
-  function handleResponse(response) {
+export default function Weather(props){
+    console.log(props) 
+    const [weatherData, setweatherData] = useState({ready: false});
+    function handleResponse(response) {
     setweatherData({
-temperature: (Math.round(response.data.main.temp)),
-description: response.data.weather[0].description,
-humidity: response.data.main.humidity,
-wind: response.data.main.wind,
-city: response.data.name,
+        ready: true,
+        date: new Date(response.data.dt * 1000),
+        temperature: (Math.round(response.data.main.temp)),
+        description: response.data.weather[0].description,
+        humidity: response.data.main.humidity,
+        wind: response.data.main.wind,
+        city: response.data.name,
     });
-    
-    setReady(true);
   }
 
-  if (ready){
+  if (weatherData.ready){
     return (
         <div className="Weather">
         <div className="weather-app-wrapper">
@@ -46,10 +47,10 @@ city: response.data.name,
             <div className="overview">
                 <div className="row">
                 <div className="col-6">
-                    <h1>Mykonos</h1>
+                    <h1>{weatherData.city}</h1>
                     <ul>
                     <li>
-                        <span className="date"></span>
+                        <span className="date"><FormattedDate date={weatherData.date} /></span>
                     </li>
                     <ul>
                         <li>
@@ -75,11 +76,11 @@ city: response.data.name,
                 </div>
                 <div className="col-6">
                     <div className="weather-temperature justify-content-end">
-                    <img src="" alt="Clear" className="icon" className="float-right" />
+                    <img src="" alt="Clear"className="float-right" />
                     <div className="text-capitalize">{weatherData.description}</div>
                     <strong iclassName="temperature">{weatherData.temperature}</strong>
                     <span className="units">
-                        <a href="www.google.com" className="celsius-link" className="active">
+                        <a href="www.google.com" className="celsius-link">
                         °C{" "}
                         </a>
                         |
@@ -90,7 +91,7 @@ city: response.data.name,
                     </div>
                 </div>
                 <hr />
-                <div className="weather-forecast" className="forecast"></div>
+                <div className="weather-forecast"></div>
                 <hr />
                 </div>
             </div>
@@ -100,10 +101,9 @@ city: response.data.name,
   );
 } else {
  const apiKey = "ad95ba85cf6afff9b76905b9243ff9af";
- let city = "Mykonos";   
  let units = "metric";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=${units}`;
      axios.get(apiUrl).then(handleResponse);
-     return <h4> Loading temperature for {weatherData.city}...</h4>;
+     return <h4> Loading temperature for {props.defaultCity}...</h4>;
 }
 }

@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <div className="container">
       <header className="App-header">
-      <Weather />
+      <Weather defaultCity={"Mykonos"} />
       </header>
       <div className="App-footer">
         <a href="https://github.com/lyl-torres/weather-react" target="_blank">
