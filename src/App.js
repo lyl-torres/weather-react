@@ -11,7 +11,7 @@ function App() {
       <Weather defaultCity={"Mykonos"} />
       </header>
       <div className="App-footer">
-        <a href="https://github.com/lyl-torres/weather-react" target="_blank">
+        <a href="https://github.com/lyl-torres/weather-react" target="_blank" rel="noreferrer">
         Open-source code
         </a>
         , by Liliana Torres.
