@@ -10,11 +10,11 @@ export default function Weather(props){
     setweatherData({
         ready: true,
         date: new Date(response.data.dt * 1000),
-        temperature: (Math.round(response.data.main.temp)),
+        temperature: Math.round(response.data.main.temp),
         description: response.data.weather[0].description,
         icon: response.data.weather[0].icon,
         humidity: response.data.main.humidity,
-        wind: response.data.main.wind,
+        wind: Math.round(response.data.wind.speed),
         city: response.data.name,
     });
   }
@@ -47,7 +47,6 @@ export default function Weather(props){
                     placeholder="Enter  a city.."
                     className="form-control"
                     autoFocus="on"
-                    autoComplete="off"
                     onChange={handleCityChange}
                     />
                 </div>

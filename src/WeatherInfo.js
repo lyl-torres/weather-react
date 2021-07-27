@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props){
     return (
@@ -25,12 +26,9 @@ export default function WeatherInfo(props){
                             <span className="wind">{props.data.wind}</span> km/h{" "}
                         </strong>
                         </li>
-                        <li>
-                        Precipitation:{" "}
-                        <strong>
-                            <span className="precipitation"></span> %{" "}
-                        </strong>
-                        </li>
+    <li className="description text-capitalize">
+                       <em>{props.data.description}</em>
+                       </li>
                     </ul>
                     </ul>
                 </div>
@@ -41,20 +39,8 @@ export default function WeatherInfo(props){
                                 code={props.data.icon} 
                             />
                          </div>
-                    <strong className="temperature">{props.data.temperature}</strong>
-                    <span className="units">
-                        <a href="www.google.com" className="celsius-link">
-                        °C{" "}
-                        </a>
-                        |
-                        <a href="www.google.com" className="fahrenheit-link">
-                        °F
-                        </a>
-                    </span>
+                    <WeatherTemperature celsius={props.data.temperature} />
                     </div>
-                    <li className="description text-capitalize">
-                       <em>{props.data.description}</em>
-                       </li>
                 </div>
                 </div>
                 </div>

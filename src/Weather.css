@@ -73,34 +73,29 @@
   margin-bottom: -30px;
   height: 50px;
   width: 50px;
-  margin-top: 0px;
+  margin-top: 10px;
   margin-left: 50px;
 }
 
 .temperature {
   color: #212121;
   font-weight: 700;
-  font-size: 55px;
+  font-size: 65px;
   padding-bottom: -100px;
 }
 
-.weather-temperature .units {
+.weather-temperature .unit {
   color: #212121;
   font-size: 12px;
   font-weight: 700;
   position: relative;
   margin-right: 1px;
   line-height: 1;
-  top: -40px;
 }
 
 a {
   color: #212121;
   text-decoration: none;
-}
-
-.description {
-  font-weight: 800;
 }
 
 .weather-forecast {
@@ -113,7 +108,7 @@ a {
   color: #494949;
 }
 
-.weather-forecast-date {
+.em .weather-forecast-date {
   font-size: 16px;
   color: white;
   font-weight: 100;
