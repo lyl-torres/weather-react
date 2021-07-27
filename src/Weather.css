@@ -3,12 +3,13 @@
   font-size: 38px;
   line-height: 48px;
   color: #212121;
-  margin: 20px 0 0;
+  margin: 0px 0 0;
 }
 
 .Weather ul {
   margin: 0;
   padding: 0;
+  text-align: left;
 }
 
 .Weather li {
@@ -68,18 +69,19 @@
   font-weight: 600;
 }
 
-.weather-temperature img {
-  margin-bottom: -15px;
-  height: 100px;
-  width: 100px;
+.clearfix canvas {
+  margin-bottom: -30px;
+  height: 50px;
+  width: 50px;
+  margin-top: 0px;
+  margin-left: 50px;
 }
 
-.weather-temperature strong {
+.temperature {
   color: #212121;
-  font-weight: 400;
   font-weight: 700;
-  font-size: 80px;
-  margin-top: 50px;
+  font-size: 55px;
+  padding-bottom: -100px;
 }
 
 .weather-temperature .units {
@@ -95,6 +97,10 @@
 a {
   color: #212121;
   text-decoration: none;
+}
+
+.description {
+  font-weight: 800;
 }
 
 .weather-forecast {
