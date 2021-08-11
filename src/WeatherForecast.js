@@ -20,20 +20,21 @@ export default function WeatherForecast(props){
         return (
          <div className="WeatherForecast">
           <div className="row">
-            {forecast.map(function(dailyForecast, index) {
-                if (index < 5) {
+            {forecast.map(function (dailyForecast, index) {
+                if (index < 4) {
                     return (
-            <div className="col" key={index}>
-               <WeatherForecastDay data={dailyForecast} />
-            </div>
+                     <div className="col" key={index}>
+                    <WeatherForecastDay data={dailyForecast} />
+               </div>
              );
+            } else {
+              return null;
             }
           })}
      </div>
     </div>
     );
-
-    } else {
+} else {
     let apiKey = "ad95ba85cf6afff9b76905b9243ff9af";
     let lon = props.coords.lon;
     let lat = props.coords.lat;

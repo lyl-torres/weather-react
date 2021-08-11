@@ -65,11 +65,16 @@ export default function Weather(props){
             <hr />
             <WeatherInfo data={weatherData} />
             <WeatherForecast coords={weatherData.coords}/>
-                <hr />
                 <div className="weather-forecast"></div>
                 <hr />
                 </div>
-            </div>
+                <div className="App-footer">
+        <a href="https://github.com/lyl-torres/weather-react" target="_blank" rel="noreferrer">
+        Open-source code on Github 
+        </a>
+        , by Liliana Torres.
+        </div>
+             </div>
             </div>
   );
 } else {
