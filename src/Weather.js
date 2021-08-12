@@ -69,10 +69,11 @@ export default function Weather(props){
                 <hr />
                 </div>
                 <div className="App-footer">
+                    Coded by Liliana Blattner
         <a href="https://github.com/lyl-torres/weather-react" target="_blank" rel="noreferrer">
-        Open-source code on Github 
-        </a>
-        , by Liliana Torres.
+        , open-sourced on Github 
+        </a> and <a href="https://github.com/lyl-torres/weather-react" target="_blank" rel="noreferrer">hosted on Netlify</a>
+        
         </div>
              </div>
             </div>
