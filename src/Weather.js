@@ -80,6 +80,6 @@ export default function Weather(props){
   );
 } else {
     search();
-     return "Loading temperature for {city}...";
+     return `Loading temperature for ${city}...`;
 }
 }
