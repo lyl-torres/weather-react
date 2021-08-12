@@ -9,7 +9,7 @@ export default function WeatherForecast(props){
 
     useEffect(() => {
        setLoaded(false);
-    }, [props.coordinates]);
+    }, [props.coords]);
 
     function handleResponse(response) {
         setForecast(response.data.daily);
@@ -19,7 +19,7 @@ export default function WeatherForecast(props){
     if (loaded) {
         return (
          <div className="WeatherForecast">
-            <div className="row">
+          <div className="row">
               {forecast.map((dailyForecast, index) => {
                   if (index < 4) {
                       return (
