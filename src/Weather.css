@@ -85,18 +85,10 @@
   padding-bottom: -100px;
 }
 
-.weather-temperature .unit {
+.unit {
   color: #212121;
-  font-size: 12px;
+  font-size: 20px;
   font-weight: 700;
-  position: relative;
-  margin-right: 1px;
-  line-height: 1;
-}
-
-a {
-  color: #212121;
-  text-decoration: none;
 }
 
 .weather-forecast {
@@ -111,8 +103,8 @@ a {
 
 .em .weather-forecast-date {
   font-size: 16px;
-  color: white;
-  font-weight: 100;
+  color: red;
+  font-weight: 300;
 }
 
 .weather-forecast-temperature-min {
