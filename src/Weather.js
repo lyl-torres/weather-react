@@ -23,7 +23,7 @@ export default function Weather(props){
   }
   function search() {
     const apiKey = "ad95ba85cf6afff9b76905b9243ff9af";
-    let units = "metric";
+    let units = "imperial";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
      axios.get(apiUrl).then(handleResponse);
   }
@@ -67,14 +67,18 @@ export default function Weather(props){
             <WeatherForecast coords={weatherData.coords}/>
                 <div className="weather-forecast"></div>
                 <hr />
+             <div className="App-footer">
+                 Coded by Liliana Torres
+                   <a href="https://github.com/lyl-torres/weather-react" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                   , open-sourced on Github 
+                   </a> and <a href="https://github.com/lyl-torres/weather-react" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                   hosted on Netlify</a>
                 </div>
-                <div className="App-footer">
-                    Coded by Liliana Blattner
-        <a href="https://github.com/lyl-torres/weather-react" target="_blank" rel="noreferrer">
-        , open-sourced on Github 
-        </a> and <a href="https://github.com/lyl-torres/weather-react" target="_blank" rel="noreferrer">hosted on Netlify</a>
-        
-        </div>
+                </div>
              </div>
             </div>
   );

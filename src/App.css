@@ -3,14 +3,7 @@ body {
 }
 .App {
   text-align: center;
-}
-
-.App-header {
-  background-color: #b6d1d3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  max-width: 600px;
 }
 
 .App-footer {
@@ -27,4 +20,12 @@ body {
 
 .App-footer a:hover {
   text-decoration: underline;
+}
+.App-header {
+  background-color: #b6d1d3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 200px;
 }
